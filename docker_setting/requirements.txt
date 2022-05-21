@@ -1,0 +1,5 @@
+Cython==0.29.28
+logzero==1.7.0
+pytorch-lightning==1.6.1
+wandb==0.12.15
+ray[tune]==1.12.0

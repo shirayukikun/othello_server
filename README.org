@@ -1,0 +1,19 @@
+* Othello
+クライアントサーバモデルのオセロ(リバーシ)アプリです
+** 準備
+1. docker_settingディレクトリ内のスクリプトのパスを設定する
+2. モデルのダウンロード(任意)
+ - 以下のurlよりBERTのモデルファイルをダウンロードする
+ - https://drive.google.com/file/d/1i9sNqYfxP-fCY5hJqDy7yd24aQkoiJUx/view?usp=sharing
+
+** 実行
+#+BEGIN_SRC bash
+zsh docker_setting/run.sh
+#+END_SRC
+
+** ライブラリ
+以下のライブラリを改変し使用しています
+- [[https://github.com/lavox/edax-reversi][edax-reversi]]
+- [[https://github.com/lavox/libedax4py][libedax4py]]
+- [[https://github.com/huggingface/transformers][transformers]]
+

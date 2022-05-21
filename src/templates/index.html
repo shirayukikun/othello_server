@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+  
+  <head>
+    <meta charset="UTF-8">
+    <title>Othello</title>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/6.2.2/browser/pixi.js"></script>
+  </head>
+  
+  <body>
+     <script type="module" src="{{ url_for('static', filename='js/othello.js') }}"></script>
+     <script type="module" src="{{ url_for('static', filename='js/game_manager.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/PixiJS_GUI.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    <div id="othello_board"></div>
+    <div id="turn_text"> </div>
+    <div id="piece_counts">  </div>
+
+    <!--
+    <div id="color_selection">
+      My color : 
+      <label><input type="radio" name="fruit" value="orange" checked>black</label>
+      <label><input type="radio" name="fruit" value="lemon">white</label>
+    </div>
+    -->
+    
+    <div id="ai_type">
+      Black AI type : 
+      <select id="black_ai_options">
+	<option value="manual">manual</option>
+	<option value="random">random</option>
+	<option value="edax">edax</option>
+	<option value="BERT">BERT</option>
+	<option value="generic">generic</option>
+      </select>
+
+      White AI type : 
+      <select id="white_ai_options">
+	<option value="manual">manual</option>
+	<option value="random">random</option>
+	<option value="edax">edax</option>
+	<option value="BERT">BERT</option>
+	<option value="generic">generic</option>
+      </select>
+    </div>
+
+    <div id="selection_policy">
+      Black AI Selection Policy: 
+      <select id="black_ai_selection_policy">
+	<option value="best">best</option>
+	<option value="slop">slop</option>
+      </select>
+
+      White AI Selection Policy: 
+      <select id="white_ai_options">
+	<option value="best">best</option>
+	<option value="slop">slop</option>
+      </select>
+    </div>
+
+
+    <div id="evaluation_value_type">
+      Evaluation value type : 
+      <select id="evaluation_value_type_options">
+	<option value="None">None</option>
+	<option value="edax">edax</option>
+	<option value="BERT">BERT</option>
+	<option value="generic">generic</option>
+      </select>
+
+    </div>
+
+    
+
+    <div id="geme_record">
+      Records : 
+      <select id="record_options">
+	<option value="red1">棋譜1</option>
+	<option value="yellow2">棋譜2</option>
+	<option value="blue3">棋譜3</option>
+      </select>
+
+      <button class="record_load_button" type="button">
+	Load
+      </button>
+    </div>
+
+    <div id="control_buttons">
+      <button class="undo_button" type="button">
+	Undo
+      </button>
+      <button class="redo_button" type="button">
+	Redo
+      </button>
+      <button class="clear_history_button" type="button">
+	Clear history
+      </button>
+      <button class="reset_button" type="button">
+	Reset
+      </button>      
+    </div>
+    
+    <div id="option_buttons">
+      <label for="show_legal_move">
+	<input type="checkbox" id="show_legal_move" />
+	Show legal move
+      </label>
+  </body>
+  
+  
+</html>
+
