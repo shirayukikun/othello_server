@@ -21,7 +21,6 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
 lib64/
 parts/
 sdist/
@@ -136,3 +135,4 @@ connect_server_docker.sh
 creversi
 models/test_model/pytorch_model.bin
 models/test_model/config.json
+*.dat
